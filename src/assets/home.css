@@ -1,0 +1,385 @@
+/* Container Utama */
+/* Tambahkan ini di paling atas file home.css */
+/* Taruh ini di bagian paling atas file CSS utama lu */
+html {
+  scroll-behavior: smooth; /* Ini kunci animasi geser halusnya */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100% !important;
+  min-height: 100vh;
+  /* overflow-x: hidden; */
+  background-color: #050b0a;
+}
+
+/* Memastikan wrapper utama tidak membatasi lebar ke samping */
+.home-page {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.home-page {
+  background: radial-gradient(circle at top right, #09201a 0%, #050b0a 60%) !important;
+  color: #f1f5f9 !important;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Sisanya biarkan kode css yang kemarin */
+/* --- PERBAIKAN 1: NAIKKAN MAKSIMAL LEBAR --- */
+.home-main {
+  min-height: 80vh;
+  max-width: 1440px; /* Diubah dari 1200px ke 1440px */
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+/* ... kode ke bawahnya tetap sama ... */
+.home-main {
+  min-height: 80vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ================= HERO SECTION ================= */
+.hero-section {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 6rem 0;
+}
+
+.hero-badge {
+  /* Badge dengan sentuhan hijau transparan */
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #ffffff;
+  letter-spacing: -1.5px;
+  margin-bottom: 1.5rem;
+}
+
+/* Gradasi Hijau Emerald pada teks highlight */
+.hero-title .highlight {
+  background: linear-gradient(135deg, #10b981, #34d399);
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 540px;
+}
+
+/* Buttons */
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Tombol Utama Hijau Menyala */
+.btn-primary {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #ffffff;
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(16, 185, 129, 0.4);
+}
+
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #e2e8f0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Hero Image dengan efek glow tipis */
+.hero-image-container {
+  position: relative;
+}
+
+.hero-img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+/* ================= FEATURES SECTION ================= */
+.features-section {
+  padding: 80px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.section-header h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.section-header p {
+  color: #94a3b8;
+  font-size: 1.05rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Card Transparan Gelap (Glassmorphism Glass) */
+.feature-card {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  background: rgba(16, 185, 129, 0.04);
+  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.feature-card p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Wrapper About Component */
+.home-about-wrapper {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 4rem;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+    padding: 3rem 0;
+  }
+  
+  .hero-subtitle {
+    margin: 0 auto 2.5rem auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-img {
+    height: 350px;
+  }
+}
+/* ================= PREVIEW SECTION ================= */
+.preview-section {
+  padding: 80px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+}
+
+.preview-title-area h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  margin-top: 0.5rem;
+}
+
+.preview-tag {
+  color: #10b981;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.view-all-link {
+  color: #10b981;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.2s ease;
+}
+
+.view-all-link:hover {
+  transform: translateX(5px);
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2.5rem;
+}
+
+/* Card Makanan Modern Dark */
+.preview-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  height: 180px; /* Bikin bentuk memanjang ke samping biar variatif */
+  transition: all 0.3s ease;
+}
+
+.preview-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(16, 185, 129, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.preview-img-wrapper {
+  position: relative;
+  width: 45%;
+  height: 100%;
+}
+
+.preview-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #10b981;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.4);
+}
+
+.preview-info {
+  width: 55%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.preview-info h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.preview-footer-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-price {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #34d399; /* Hijau agak terang */
+}
+
+.btn-mini {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 0.4rem 1.2rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-mini:hover {
+  background: #10b981;
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .preview-card {
+    flex-direction: column;
+    height: auto;
+  }
+  .preview-img-wrapper, .preview-info {
+    width: 100%;
+  }
+  .preview-img-wrapper {
+    height: 160px;
+  }
+  .preview-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif;
+  background: radial-gradient(circle at top right, #09201a 0%, #050b0a 60%);
+  color: #f1f5f9;
+  min-height: 100vh;
+}
+
+/* Container utama Header - Background Gelap Transparan */
+.simple-header {
+  width: 100% ;
+  background-color: rgba(5, 11, 10, 0.75) !important; /* Memaksa warna gelap murni */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(16, 185, 129, 0.15); 
+  position: sticky; 
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  width: 100%;            
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.2rem 2rem;    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ffffff !important; /* Memaksa logo teks tetap putih */
+  letter-spacing: -1px;
+}
+
+/* Titik estetis di logo hijau emerald */
+.logo-dot {
+  color: #10b981 !important; 
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem; 
+}
+
+/* PERBAIKAN: Mengubah selektor langsung ke tag 'a' agar sinkron dengan Link komponen lu */
+.header-nav a {
+  text-decoration: none;
+  color: #94a3b8 !important; /* Warna abu-abu soft agar masuk ke dark mode */
+  font-size: 0.95rem;
+  font-weight: 600;
+  position: relative;
+  padding: 0.2rem 0;
+  transition: color 0.25s ease-in-out;
+}
+
+/* Garis bawah animasi warna hijau */
+.header-nav a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #10b981;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.header-nav a:hover::after,
+.header-nav a.active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Warna text berubah saat di-hover atau aktif */
+.header-nav a:hover,
+.header-nav a.active {
+  color: #10b981 !important;
+}
